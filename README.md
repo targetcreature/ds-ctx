@@ -30,11 +30,7 @@ import { initState } from "./initState"
 import { Component } from "./component"
 import { DSCTX } from "ds-ctx"
 
-const args = {
-    disableAutoFreeze: true
-}
-
-const [ ContextProvider, useCTX ] = DSCTX(initState, args)
+const [ ContextProvider, useCTX ] = DSCTX(initState)
 
 export default ()=>
     <ContextProvider>
