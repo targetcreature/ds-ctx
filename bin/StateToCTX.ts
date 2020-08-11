@@ -2,14 +2,13 @@ import { createContext, useContext } from "react"
 import { CTX } from "../_types"
 import { isObject } from "./_isObject"
 
-
 const CTXArray = []
 
 const loopCTX = <T>(state: T) => Object.entries(state).reduce((prev, [key, val]) => {
 
     let value = {}
 
-    if (isObject(val)) {
+    if (isObject(val) && !val.dsPreserve) {
         value = loopCTX(val)
     }
 
