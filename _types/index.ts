@@ -2,7 +2,9 @@ type Preserve = {
     dsPreserve: true
 }
 
-type NotObject = string | number | boolean | any[] | Preserve
+interface Filter extends Preserve { }
+
+type NotObject = string | number | boolean | any[] | Filter
 
 export interface CTX<T> {
     initState: T
