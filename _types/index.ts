@@ -1,7 +1,5 @@
 type Preserve = {
-    [key: string]: {
-        dsPreserve: true
-    }
+    dsPreserve: true
 }
 
 type NotObject = string | number | boolean | any[] | Preserve
