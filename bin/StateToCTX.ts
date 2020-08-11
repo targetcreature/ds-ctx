@@ -8,7 +8,7 @@ const loopCTX = <T>(state: T) => Object.entries(state).reduce((prev, [key, val])
 
     let value = {}
 
-    if (isObject(val) && !val.preserveCTX) {
+    if (isObject(val) && !val.__preserveCTX) {
         value = loopCTX(val)
     }
 

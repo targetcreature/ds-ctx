@@ -16,7 +16,7 @@ usage:
 // initState.ts
 export const initState = {
     fruit:{
-        preserveCTX?: true, /* preserve object as its own context  */
+        __preserveCTX?: true, /* preserve object as its own context  */
         apples: 1,
         bananas: 2,
         grapes: 3
