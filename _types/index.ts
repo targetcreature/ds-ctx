@@ -1,5 +1,5 @@
 type Preserve = {
-    dsPreserve: true
+    preserveCTX: true
 }
 
 interface Filter extends Preserve { }

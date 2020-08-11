@@ -6,7 +6,7 @@ export const _useCTX = <T>(CTX: T, init: T): UseCTX<T> => {
     const loopSet = <P>(obj: P) => Object.entries(obj).reduce((prev, [key, val]): SET<P> => {
 
         let value = {}
-        if (isObject(val) && !val.dsPreserve) {
+        if (isObject(val) && !val.preserveCTX) {
             value = loopSet(val)
         }
 
