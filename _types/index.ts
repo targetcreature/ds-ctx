@@ -1,4 +1,10 @@
-type NotObject = string | number | boolean | any[]
+type Preserve = {
+    [key: string]: {
+        dsPreserve: true
+    }
+}
+
+type NotObject = string | number | boolean | any[] | Preserve
 
 export interface CTX<T> {
     initState: T
